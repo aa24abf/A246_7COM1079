@@ -1,1 +1,4 @@
 1. https://www.investopedia.com/terms/s/sma.asp
+2. https://www.r-bloggers.com/2017/03/an-introduction-to-stock-market-data-analysis-with-r-part-1/
+3. https://www.geeksforgeeks.org/stock-data-analysis-and-data-visualization-with-quantmod-in-r/
+4. https://medium.com/codex/stock-market-analysis-with-r-programming-language-c3ab502eb3e7
