@@ -9,3 +9,4 @@ for (i in 1:length(data$Close)){
 
 data$sma = x
 data
+write.csv(data, "Dataset_SMA.csv", row.names = FALSE)
