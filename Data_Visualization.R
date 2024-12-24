@@ -8,14 +8,14 @@ sum(!is.finite(data$sma))
 data_cleaned <- data[!is.na(data$sma) & !is.nan(data$sma) & !is.infinite(data$sma), ]
 sum(!is.finite(data_cleaned$sma))
 
-binwidth_value <- (max(data_cleaned$diff) - min(data_cleaned$diff)) / 50
-ggplot(data = data_cleaned, aes(x = diff)) +
-  geom_histogram(aes(y = after_stat(density)), binwidth = binwidth_value, fill = "blue", color = "white", alpha = 0.7) +
-  geom_density(color = "red", size = 1) +
-  labs(title = "Difference between High and Low with Density Curve", 
-       x = "Difference (High - Low)", 
-       y = "Density") +
-  theme_minimal()
+h <- hist(data_cleaned$diff
+  
+  , 12
+  , main = "Hyundai Stock Frequency"
+  , xlab = "Difference of High and Low"
+  , ylab = "Frequency"
+  , col  = "azure"
+  )
 
 ggplot(data = data_cleaned, aes(x = sma, y = diff)) +
   geom_point(color = "blue", alpha = 0.6) +
