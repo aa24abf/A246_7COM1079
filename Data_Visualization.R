@@ -20,11 +20,12 @@ h <- hist(data_cleaned$diff
   , col  = "azure"
   )
 
-ggplot(data = data_cleaned, aes(x = sma, y = diff)) +
-  geom_point(color = "blue", alpha = 0.6) +
-  geom_smooth(method = "lm", color = "red", se = FALSE) +
-  labs(title = "Scatterplot of 20-day SMA vs. Difference btw High and Low", x = "20-day SMA", y = "Difference btw High and Low") +
-  theme_minimal()
+x <- data_cleaned$diff
+y <- data_cleaned$sma
+
+plot(y,x,main = "Hyundai Stock" , xlab = "Difference btw High and Low" , ylab = "20-day SMA" , pch = 19, frame = T)
+model <- lm(y ~ x, data = data_cleaned)
+abline(model, col = "blue")
 
 cor_test_result <- cor.test(data_cleaned$sma, data_cleaned$diff, method = "pearson")
 
