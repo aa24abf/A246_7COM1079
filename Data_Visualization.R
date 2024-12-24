@@ -4,6 +4,8 @@ library(dplyr)
 data = read.csv("Dataset_SMA.csv")
 data
 
+summary(data)
+
 sum(!is.finite(data$sma))
 data_cleaned <- data[!is.na(data$sma) & !is.nan(data$sma) & !is.infinite(data$sma), ]
 sum(!is.finite(data_cleaned$sma))
