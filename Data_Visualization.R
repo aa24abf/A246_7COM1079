@@ -20,13 +20,15 @@ h <- hist(data_cleaned$diff
   , col  = "azure"
   )
 
-x <- data_cleaned$diff
-y <- data_cleaned$sma
+y <- data_cleaned$diff
+x <- data_cleaned$sma
 
-plot(y,x,main = "Hyundai Stock" , xlab = "Difference btw High and Low" , ylab = "20-day SMA" , pch = 19, frame = T)
+plot(x,y,main = "Hyundai Stock" , xlab = "Difference btw High and Low" , ylab = "20-day SMA" , pch = 19, frame = T)
 model <- lm(y ~ x, data = data_cleaned)
 abline(model, col = "blue")
 
-cor_test_result <- cor.test(data_cleaned$sma, data_cleaned$diff, method = "pearson")
+cor_test_result <- cor.test(x, y, method = "kendall")
+print(cor_test_result)
 
+cor_test_result <- cor.test(x, y, method = "spearman")
 print(cor_test_result)
