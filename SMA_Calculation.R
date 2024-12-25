@@ -11,3 +11,4 @@ write.csv(data, "Dataset_SMA.csv", row.names = FALSE)
 
 
 
+
