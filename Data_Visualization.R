@@ -10,8 +10,8 @@ sum(!is.finite(data$sma))
 data_cleaned <- data[!is.na(data$sma) & !is.nan(data$sma) & !is.infinite(data$sma), ]
 sum(!is.finite(data_cleaned$sma))
 
-<<<<<<< HEAD
-=======
+
+
 
 h <- hist(data_cleaned$diff
   
@@ -19,9 +19,9 @@ h <- hist(data_cleaned$diff
   , main = "Hyundai Stock Frequency"
   , xlab = "Difference of High and Low"
   , ylab = "Frequency"
-  , col  = "azure"
+  , col  = "blue"
   )
->>>>>>> b5e91f29c10db9b27c5035bbbb3bb2193b1ad6e3
+
 
 y <- data_cleaned$diff
 x <- data_cleaned$sma
