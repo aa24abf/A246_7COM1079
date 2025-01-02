@@ -1,5 +1,6 @@
 library(TTR)
-data = read.csv("005380.KS.csv")
+data = read.csv("005380.KS.csv") # Read "005380.KS.csv" into 'data'
+
 data
 
 data$sma = SMA(data$Close, n = 20) # Compute 20-period SMA
