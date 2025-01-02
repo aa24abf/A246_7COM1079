@@ -1,0 +1,8 @@
+1.SMAs are often used to determine trend direction. If the SMA is moving up, the trend is up. If the SMA is moving down, the trend is down. 
+
+2.Shorter period SMAs can be used to determine shorter term trends.
+3.SMAs are commonly used to smooth price data and technical indicators. The longer the period of the SMA, 
+the smoother the result, but the more lag that is introduced between the SMA and the source.
+
+4.Price crossing SMA is often used to trigger trading signals. When prices cross above the SMA, you might want to go long or cover short.
+ when they cross below the SMA, you might want to go short or exit long.
