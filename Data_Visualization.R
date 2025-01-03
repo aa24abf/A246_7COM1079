@@ -26,6 +26,7 @@ h <- hist(data_cleaned$diff
 y <- data_cleaned$diff
 x <- data_cleaned$sma
 
+# Histogram of Difference btw High and Low and 20-day SMA of Hyundai Stock
 plot(x,y,main = "Hyundai Stock" , xlab = "Difference btw High and Low" , ylab = "20-day SMA" , pch = 19, frame = T)
 model <- lm(y ~ x, data = data_cleaned)
 abline(model, col = "blue")
