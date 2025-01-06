@@ -2,7 +2,7 @@ library(TTR)
 data = read.csv("005380.KS.csv")
 data
 
-data$sma = SMA(data$Close, n = 20)
+data$sma = SMA(data$Close, n = 20) # Compute 20-period SMA of 'Close' and store it in 'sma' column
 data$diff = data$High - data$Low
 data
 
