@@ -1,12 +1,12 @@
 library(TTR)
-data = read.csv("005380.KS.csv")
+data = read.csv("005380.KS.csv") 
 data
 
-data$sma = SMA(data$Close, n = 20) # Compute 20-period SMA of 'Close' and store it in 'sma' column
-data$diff = data$High - data$Low # Compute 'High' - 'Low' and store in 'diff' column
+data$sma = SMA(data$Close, n = 20) # Calculation of 20-Day Simple Moving Average
+data$pricevolatility = data$High - data$Low # Caculation of Price Volatility
 data
 
-write.csv(data, "Dataset_SMA.csv", row.names = FALSE) # Save 'data' to 'Dataset_SMA.csv' without row names
+write.csv(data, "Dataset_SMA.csv", row.names = FALSE) # Saving the modified dataset for further Visualisation and Analysis
 
 
 
