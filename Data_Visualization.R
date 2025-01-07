@@ -21,13 +21,18 @@ h <- hist(data_cleaned$diff
   , ylab = "Frequency"
   , col  = "blue"
   )
+xfit <- seq(min(data_cleaned$diff), max(data_cleaned$diff), length = 40) 
+yfit <- dnorm(xfit, mean = mean(data_cleaned$diff), sd = sd(data_cleaned$diff)) 
+yfit <- yfit * diff(h$mids[1:2]) * length(data_cleaned$diff) 
+
+lines(xfit, yfit, col = "black", lwd = 2)
 
 
 y <- data_cleaned$diff
 x <- data_cleaned$sma
 
 
-plot(x,y,main = "Hyundai Stock" , xlab = "Difference btw High and Low" , ylab = "20-day SMA" , pch = 19, frame = T)
+plot(x,y,main = "Hyundai Stock - ScatterPlot" , xlab = "Difference btw High and Low" , ylab = "20-day SMA" , pch = 19, frame = T)
 model <- lm(y ~ x, data = data_cleaned)
 abline(model, col = "blue")
 
