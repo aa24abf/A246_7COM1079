@@ -32,7 +32,7 @@ lines(xfit, yfit, col = "black", lwd = 2)
 
 # Scatterplot of Price Volatility vs. 20-Day Simple Moving Average
 
-plot(x,y,main = "Scatterplot of Price Volatility vs. 20-Day Simple Moving Average" , xlab = "Price Volatility (in KRW)" , ylab = "20-day SMA (in KRW)" , pch = 19, frame = T)
+plot(x,y,main = "Scatterplot of Price Volatility vs. 20-Day Simple Moving Average" , xlab = "20-day SMA (in KRW)" , ylab = "Price Volatility (in KRW)" , pch = 19, frame = T)
 model <- lm(y ~ x, data = data_cleaned)
 abline(model, col = "blue")
 
